@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import ComponenteHijo from "./components/ComponenteHijo";
 
