@@ -5,12 +5,17 @@ import ComponenteSinContext from "./ComponenteSinContext";
 import "./index.css";
 
 import { GlobalProvider } from "./context/global/global.context";
+import { I18nextProvider } from "react-i18next";
+
+import i18n from "./config/localization/i18n";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <GlobalProvider>
-      <App />
-    </GlobalProvider>
-    <ComponenteSinContext />
+    <I18nextProvider i18n={i18n}>
+      <GlobalProvider>
+        <App />
+      </GlobalProvider>
+      <ComponenteSinContext />
+    </I18nextProvider>
   </React.StrictMode>
 );
