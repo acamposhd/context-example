@@ -10,12 +10,10 @@ export const GlobalProvider = ({ children }) => {
   const [state, setState] = useState(initialState);
 
   const handleCount = (type) => {
-    setState((current) => {
-      return {
-        ...current,
-        count: type === "increment" ? current.count + 1 : current.count - 1,
-      };
-    });
+    setState((current) => ({
+      ...current,
+      count: type === "increment" ? current.count + 1 : current.count - 1,
+    }));
   };
 
   return (
